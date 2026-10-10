@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-10",
+  "environment": "Local HTTP server, macOS, automated Chromium and WebKit",
+  "viewports": [
+    {
+      "width": 2560,
+      "overflow": false,
+      "broken": [],
+      "triggers": 17,
+      "smoother": true,
+      "heroTitle": 2130
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "broken": [],
+      "triggers": 17,
+      "smoother": true,
+      "heroTitle": 1359.359375
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "broken": [],
+      "triggers": 17,
+      "smoother": true,
+      "heroTitle": 1208.3125
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "broken": [],
+      "triggers": 17,
+      "smoother": true,
+      "heroTitle": 966.640625
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "broken": [],
+      "triggers": 11,
+      "smoother": false,
+      "heroTitle": 740
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "broken": [],
+      "triggers": 11,
+      "smoother": false,
+      "heroTitle": 408
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "broken": [],
+      "triggers": 11,
+      "smoother": false,
+      "heroTitle": 368
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "broken": [],
+      "triggers": 11,
+      "smoother": false,
+      "heroTitle": 302
+    }
+  ],
+  "flows": [
+    "Search by color/model, empty result, select result and focus",
+    "Product modal, Escape/focus restoration, compare shortcut, duplicate selection swap, live price",
+    "Gallery arrows, End/Home, position and disabled controls",
+    "Mobile menu focus trap, Escape, focus return, anchor navigation",
+    "Reduced motion: no triggers/smoother, paused video, all sections available",
+    "Reverse scroll and desktop/mobile/reduced-motion lifecycle",
+    "GSAP unavailable: search and visible static content"
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "correctedIssues": [
+    "Gallery position label contrast",
+    "Manifesto labels, accent word and secondary copy contrast",
+    "Solid header after scrolling"
+  ],
+  "accessibility": [
+    {
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "overlay": "search",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "overlay": "search",
+      "violations": []
+    }
+  ],
+  "webkit": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "videoWidth": 1920,
+      "videoPaused": false,
+      "broken": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 664,
+      "overflow": false,
+      "videoWidth": 1920,
+      "videoPaused": false,
+      "broken": [],
+      "errors": []
+    },
+    {
+      "width": 810,
+      "height": 1080,
+      "overflow": false,
+      "videoWidth": 1920,
+      "videoPaused": false,
+      "broken": [],
+      "errors": []
+    }
+  ],
+  "fallback": [
+    "Video pause/play control",
+    "Video unavailable: real poster remains visible"
+  ],
+  "performance": {
+    "lcp": 116,
+    "cls": 0,
+    "scope": "Local unthrottled Chrome sample, not field Core Web Vitals"
+  }
+}

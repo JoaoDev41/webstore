@@ -5,619 +5,765 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Tech.apple — uma experiência imersiva para conhecer a nova família iPhone."
+      content="Uma nova perspectiva. Uma experiência independente de design do iPhone 18 Pro e uma nova maneira de explorar a família iPhone. Concept experience by Light."
     />
-    <meta name="theme-color" content="#050403" />
-    <title>Tech.apple — iPhone 17</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#181219" />
+    <title>Tech.apple — Uma nova perspectiva.</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="assets/iphone-18-poster.webp"
+      as="image"
+      type="image/webp"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="assets/vendor/gsap.min.js"></script>
+    <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+    <script defer src="assets/vendor/ScrollSmoother.min.js"></script>
+    <script defer src="assets/vendor/SplitText.min.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-
-    <div class="page-loader" aria-hidden="true">
-      <div class="loader-word">Tech.<span>apple</span></div>
-      <div class="loader-line"><i></i></div>
-    </div>
-
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Tech.apple — início"
-        >Tech.<span>apple</span></a
+        >Tech<span>.</span>apple</a
       >
-
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="#familia">iPhone</a>
-        <a href="#sobre">Experiência</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#detalhes">Detalhes</a>
+        <a href="#inicio">Conceito</a><a href="#familia">A família</a
+        ><a href="#detalhes">Experiência</a><a href="#comparar">Comparar</a>
       </nav>
-
       <div class="header-actions">
+        <span class="header-edition">INDEPENDENT CONCEPT</span>
         <button
           class="icon-button search-trigger"
           type="button"
-          aria-label="Abrir busca"
+          aria-label="Buscar modelos"
+          aria-haspopup="dialog"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="6.5"></circle>
-            <path d="m16 16 4 4"></path>
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 4 4" />
           </svg>
         </button>
         <button
-          class="icon-button bag-trigger"
-          type="button"
-          aria-label="Abrir sacola"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M5.5 8.5h13l-1 11h-11z"></path>
-            <path d="M9 9V6.8a3 3 0 0 1 6 0V9"></path>
-          </svg>
-        </button>
-        <button
-          class="menu-button"
+          class="icon-button menu-button"
           type="button"
           aria-label="Abrir menu"
           aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <span></span><span></span>
         </button>
       </div>
     </header>
-
-    <div class="mobile-menu" aria-hidden="true">
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Menu principal">
+      <div class="menu-top">
+        <span class="brand">Tech<span>.</span>apple</span
+        ><button class="icon-button" data-close aria-label="Fechar menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <p class="eyebrow">Uma nova perspectiva</p>
       <nav aria-label="Navegação móvel">
-        <a href="#inicio">Início</a>
-        <a href="#familia">iPhone</a>
-        <a href="#sobre">Experiência</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#detalhes">Detalhes</a>
+        <a href="#inicio">Conceito</a><a href="#familia">A família</a
+        ><a href="#detalhes">Experiência</a><a href="#comparar">Comparar</a>
       </nav>
-      <p>O futuro cabe na sua mão.</p>
-    </div>
-
-    <div
-      class="search-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Busca"
-      aria-hidden="true"
-    >
-      <button class="search-close" type="button" aria-label="Fechar busca">
-        Fechar
-      </button>
-      <form class="search-form">
-        <label for="site-search">O que você procura?</label>
-        <div class="search-input-wrap">
-          <input
-            id="site-search"
-            type="search"
-            placeholder="iPhone 17 Pro"
-            autocomplete="off"
-          />
-          <button type="submit" aria-label="Pesquisar">↗</button>
-        </div>
-        <p>Explore iPhone, câmeras, desempenho e design.</p>
-      </form>
-    </div>
-
-    <main id="conteudo">
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <img
-          class="hero-image"
-          src="IMGS/IMAGEM-HERO2.png"
-          alt="iPhone 17 Pro laranja-cósmico em um cenário iluminado"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-glow" aria-hidden="true"></div>
-
-        <div class="hero-content shell">
-          <p class="eyebrow hero-eyebrow">Novo iPhone 17 Pro</p>
-          <h1 id="hero-title" class="hero-title split-title">
-            Potência.<br /><span>Sem limites.</span>
-          </h1>
-          <p class="hero-copy">
-            Design unibody. Desempenho extraordinário.<br />Uma nova era para o
-            iPhone.
-          </p>
-          <div class="hero-cta-row">
-            <a class="button button-primary magnetic" href="#familia"
-              >Conheça agora <span>↘</span></a
-            >
-          </div>
-        </div>
-
-        <div class="hero-meta">
-          <span>Laranja-cósmico</span>
-          <span>01 — 05</span>
-        </div>
-        <a
-          class="scroll-cue"
-          href="#familia"
-          aria-label="Rolar para conhecer a família"
+      <p class="menu-note">
+        Design. Tecnologia. Possibilidades.<br /><span
+          >Um conceito independente por Light.</span
         >
-          <span>Explore</span><i></i>
-        </a>
-      </section>
-
-      <section
-        class="family section-light"
-        id="familia"
-        aria-labelledby="family-title"
+      </p>
+    </dialog>
+    <dialog
+      class="search-panel"
+      id="search-panel"
+      aria-labelledby="search-title"
+    >
+      <button
+        class="icon-button dialog-close"
+        data-close
+        aria-label="Fechar busca"
       >
-        <div class="family-pin">
-          <div class="section-heading shell reveal-row">
-            <div>
-              <p class="eyebrow dark">Escolha o seu</p>
-              <h2 id="family-title" class="section-title split-title">
-                Conheça a família.
-              </h2>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <div class="search-inner">
+        <p class="eyebrow">Encontre sua perspectiva</p>
+        <h2 id="search-title">Qual é o seu iPhone?</h2>
+        <form class="search-form" role="search">
+          <label class="sr-only" for="site-search">Buscar modelos</label>
+          <div class="search-input-wrap">
+            <input
+              id="site-search"
+              type="search"
+              placeholder="Busque por modelo ou cor"
+              autocomplete="off"
+            /><button
+              class="icon-button"
+              type="submit"
+              aria-label="Ver primeiro resultado"
+            >
+              <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </form>
+        <p id="search-count" class="search-count" role="status"></p>
+        <div class="search-results"></div>
+      </div>
+    </dialog>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main id="conteudo" tabindex="-1">
+          <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-media">
+              <picture
+                ><source
+                  srcset="assets/iphone-18-poster.webp"
+                  type="image/webp" />
+                <img
+                  class="hero-image"
+                  src="assets/iphone-18-poster.jpg"
+                  width="1920"
+                  height="1080"
+                  alt="Estudo visual do iPhone 18 Pro: acabamento roxo metálico e três câmeras em close-up"
+                  fetchpriority="high"
+              /></picture>
+              <video
+                class="hero-video"
+                muted
+                playsinline
+                loop
+                preload="none"
+                poster="assets/iphone-18-poster.webp"
+                data-src="IMGS/iPhone_product_reveal_video_1080p_20261010133414.mp4"
+                aria-hidden="true"
+              ></video>
             </div>
-            <div class="heading-actions">
-              <a href="#comparar">Comparar modelos <span>↗</span></a>
-              <div class="carousel-buttons" aria-label="Controles do carrossel">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-heading shell">
+              <p class="eyebrow hero-eyebrow">
+                A NEW PERSPECTIVE <span>CONCEPT / 01</span>
+              </p>
+              <h1 id="hero-title">iPhone 18 Pro.</h1>
+            </div>
+            <div class="hero-content shell">
+              <div>
+                <p class="hero-copy">
+                  Uma nova dimensão<br />de possibilidades.
+                </p>
+                <a class="text-link hero-cta" href="#design"
+                  >Explore o conceito
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                ></a>
+              </div>
+              <span class="hero-caption"
+                >Uma visão do que vem a seguir.<br />Conceito independente. Não
+                oficial.</span
+              >
+            </div>
+            <div class="hero-bottom shell">
+              <a class="scroll-cue" href="#design"
+                ><span class="scroll-line"></span>Role para descobrir</a
+              >
+              <div class="hero-meta">
+                <span><i></i> METALLIC PURPLE</span
+                ><button
+                  class="video-toggle"
+                  type="button"
+                  aria-label="Reproduzir vídeo do conceito"
+                  hidden
+                >
+                  Reproduzir vídeo <span aria-hidden="true">Ⅱ</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section
+            class="product-reveal"
+            id="design"
+            aria-labelledby="reveal-title"
+          >
+            <div class="reveal-stage shell">
+              <div class="section-label">
+                <span>01 / O CONCEITO</span><span>UM ESTUDO EM PRECISÃO</span>
+              </div>
+              <div class="reveal-composition">
+                <div class="reveal-copy">
+                  <p class="eyebrow">Forma. Textura. Presença.</p>
+                  <h2 id="reveal-title" class="split-title">
+                    Cada detalhe<br /><span>importa.</span>
+                  </h2>
+                  <p>
+                    Uma nova expressão em roxo metálico.<br />Luz que desenha as
+                    curvas. Textura que revela a forma.
+                  </p>
+                  <span class="reveal-counter" aria-hidden="true"
+                    >18<span> / PRO CONCEPT</span></span
+                  >
+                </div>
+                <figure class="reveal-figure">
+                  <img
+                    src="assets/iphone-18-poster.webp"
+                    alt="Enquadramento do módulo de câmeras no conceito roxo"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    <span>01 — A geometria do olhar</span
+                    ><span>Estudo visual</span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="reveal-notes">
+                <span><b>01</b> Textura metálica</span
+                ><span><b>02</b> Geometria precisa</span
+                ><span><b>03</b> Uma nova perspectiva</span>
+              </div>
+            </div>
+          </section>
+          <section
+            class="family section-light"
+            id="familia"
+            aria-labelledby="family-title"
+          >
+            <div class="section-label shell">
+              <span>02 / A COLEÇÃO</span><span>CINCO FORMAS DE SER IPHONE</span>
+            </div>
+            <div class="section-heading shell">
+              <h2 id="family-title" class="section-title split-title">
+                Encontre o seu.<br /><span>Conheça a família.</span>
+              </h2>
+              <a class="text-link" href="#comparar"
+                >Compare suas possibilidades
+                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+              ></a>
+            </div>
+            <div
+              class="product-scroll"
+              data-carousel="products"
+              tabindex="0"
+              role="region"
+              aria-label="Galeria de modelos iPhone. Use as setas para navegar."
+            >
+              <article
+                id="iphone-17-pro"
+                data-color="Laranja-cósmico"
+                class="product-card featured"
+              >
+                <a
+                  class="product-visual"
+                  href="#iphone-17-pro"
+                  data-product-details="iphone-17-pro"
+                  aria-label="Conhecer iPhone 17 Pro"
+                >
+                  <img
+                    src="IMGS/Link.jpg"
+                    alt="iPhone 17 Pro na cor laranja-cósmico"
+                    loading="lazy"
+                    width="372"
+                    height="395"
+                    decoding="async"
+                  />
+                  <span class="product-index">01 / 05</span>
+                </a>
+                <p class="product-color">
+                  <span style="--swatch: #c76a35"></span>Laranja-cósmico
+                </p>
+                <h3>iPhone 17 Pro</h3>
+                <p>O iPhone mais poderoso até hoje.</p>
+                <strong>A partir de R$ 11.499</strong>
+                <div class="card-actions">
+                  <a class="button button-small" href="#contato">Comprar</a
+                  ><a href="#iphone-17-pro" data-product-details="iphone-17-pro"
+                    >Explorar
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                  ></a>
+                </div>
+              </article>
+              <article
+                id="iphone-air"
+                data-color="Azul-céu"
+                class="product-card"
+              >
+                <a
+                  class="product-visual"
+                  href="#iphone-air"
+                  data-product-details="iphone-air"
+                  aria-label="Conhecer iPhone Air"
+                >
+                  <img
+                    src="IMGS/cinza.jpg"
+                    alt="iPhone Air azul-céu"
+                    loading="lazy"
+                    width="372"
+                    height="395"
+                    decoding="async"
+                  />
+                  <span class="product-index">02 / 05</span></a
+                >
+                <p class="product-color">
+                  <span style="--swatch: #c0d6e4"></span>Azul-céu
+                </p>
+                <h3>iPhone Air</h3>
+                <p>Impossivelmente fino. Surpreendentemente forte.</p>
+                <strong>A partir de R$ 10.499</strong>
+                <div class="card-actions">
+                  <a class="button button-small" href="#contato">Comprar</a
+                  ><a href="#iphone-air" data-product-details="iphone-air"
+                    >Explorar
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                  ></a>
+                </div>
+              </article>
+              <article id="iphone-17" data-color="Lavanda" class="product-card">
+                <a
+                  class="product-visual"
+                  href="#iphone-17"
+                  data-product-details="iphone-17"
+                  aria-label="Conhecer iPhone 17"
+                >
+                  <img
+                    src="IMGS/rosa.jpg"
+                    alt="iPhone 17 lavanda"
+                    loading="lazy"
+                    width="372"
+                    height="395"
+                    decoding="async"
+                  />
+                  <span class="product-index">03 / 05</span></a
+                >
+                <p class="product-color">
+                  <span style="--swatch: #c6b4d8"></span>Lavanda
+                </p>
+                <h3>iPhone 17</h3>
+                <p>Mais resistente. Ainda mais irresistível.</p>
+                <strong>A partir de R$ 7.999</strong>
+                <div class="card-actions">
+                  <a class="button button-small" href="#contato">Comprar</a
+                  ><a href="#iphone-17" data-product-details="iphone-17"
+                    >Explorar
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                  ></a>
+                </div>
+              </article>
+              <article
+                id="iphone-17e"
+                data-color="Rosa-pálido"
+                class="product-card"
+              >
+                <a
+                  class="product-visual"
+                  href="#iphone-17e"
+                  data-product-details="iphone-17e"
+                  aria-label="Conhecer iPhone 17e"
+                >
+                  <img
+                    src="IMGS/bege.jpg"
+                    alt="iPhone 17e rosa-pálido"
+                    loading="lazy"
+                    width="372"
+                    height="395"
+                    decoding="async"
+                  />
+                  <span class="product-index">04 / 05</span></a
+                >
+                <p class="product-color">
+                  <span style="--swatch: #f1c6ce"></span>Rosa-pálido
+                </p>
+                <h3>iPhone 17e</h3>
+                <p>Tudo o que você ama. Feito para durar.</p>
+                <strong>A partir de R$ 5.799</strong>
+                <div class="card-actions">
+                  <a class="button button-small" href="#contato">Comprar</a
+                  ><a href="#iphone-17e" data-product-details="iphone-17e"
+                    >Explorar
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                  ></a>
+                </div>
+              </article>
+              <article
+                id="iphone-16"
+                data-color="Azul ultramarino"
+                class="product-card"
+              >
+                <a
+                  class="product-visual"
+                  href="#iphone-16"
+                  data-product-details="iphone-16"
+                  aria-label="Conhecer iPhone 16"
+                >
+                  <img
+                    src="IMGS/ROXO.jpg"
+                    alt="iPhone 16 azul ultramarino"
+                    loading="lazy"
+                    width="372"
+                    height="395"
+                    decoding="async"
+                  />
+                  <span class="product-index">05 / 05</span></a
+                >
+                <p class="product-color">
+                  <span style="--swatch: #555dd2"></span>Azul ultramarino
+                </p>
+                <h3>iPhone 16</h3>
+                <p>Desempenho incrível. Valor surpreendente.</p>
+                <strong>A partir de R$ 6.799</strong>
+                <div class="card-actions">
+                  <a class="button button-small" href="#contato">Comprar</a
+                  ><a href="#iphone-16" data-product-details="iphone-16"
+                    >Explorar
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                  ></a>
+                </div>
+              </article>
+            </div>
+            <div class="gallery-footer shell">
+              <div class="gallery-progress" aria-hidden="true">
+                <span></span>
+              </div>
+              <p class="gallery-position" aria-live="polite">
+                <span id="gallery-index">01</span> / 05
+              </p>
+              <div class="carousel-buttons">
                 <button
                   type="button"
                   data-carousel-prev="products"
-                  aria-label="Produtos anteriores"
+                  aria-label="Modelo anterior"
                 >
-                  ←
-                </button>
-                <button
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg></button
+                ><button
                   type="button"
                   data-carousel-next="products"
-                  aria-label="Próximos produtos"
+                  aria-label="Próximo modelo"
                 >
-                  →
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </button>
               </div>
             </div>
-          </div>
-
-          <div class="product-scroll" data-carousel="products">
-            <article class="product-card featured">
-              <a
-                class="product-visual"
-                href="#detalhes"
-                aria-label="Conhecer iPhone 17 Pro"
-              >
-                <img
-                  src="IMGS/Link.jpg"
-                  alt="iPhone 17 Pro na cor laranja-cósmico"
-                  loading="eager"
-                />
-                <span class="new-badge">Novo</span>
-              </a>
-              <div class="swatches" aria-label="Cores disponíveis">
-                <i class="orange active"></i><i class="navy"></i
-                ><i class="silver"></i>
-              </div>
-              <h3>iPhone 17 Pro</h3>
-              <p>O iPhone mais poderoso até hoje.</p>
-              <strong>A partir de R$ 11.499</strong>
-              <div class="card-actions">
-                <a class="button button-small" href="#contato">Comprar</a
-                ><a href="#detalhes">Saiba mais ›</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <a
-                class="product-visual"
-                href="#detalhes"
-                aria-label="Conhecer iPhone Air"
-              >
-                <img
-                  src="IMGS/cinza.jpg"
-                  alt="iPhone Air azul-céu"
-                  loading="lazy"
-                />
-              </a>
-              <div class="swatches" aria-label="Cores disponíveis">
-                <i class="sky active"></i><i class="cream"></i
-                ><i class="white"></i><i class="black"></i>
-              </div>
-              <h3>iPhone Air</h3>
-              <p>Impossivelmente fino. Surpreendentemente forte.</p>
-              <strong>A partir de R$ 10.499</strong>
-              <div class="card-actions">
-                <a class="button button-small" href="#contato">Comprar</a
-                ><a href="#detalhes">Saiba mais ›</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <a
-                class="product-visual"
-                href="#detalhes"
-                aria-label="Conhecer iPhone 17"
-              >
-                <img
-                  src="IMGS/bege.jpg"
-                  alt="iPhone 17 lavanda"
-                  loading="lazy"
-                />
-              </a>
-              <div class="swatches" aria-label="Cores disponíveis">
-                <i class="lilac active"></i><i class="sage"></i
-                ><i class="blue"></i><i class="white"></i><i class="black"></i>
-              </div>
-              <h3>iPhone 17</h3>
-              <p>Mais resistente. Ainda mais irresistível.</p>
-              <strong>A partir de R$ 7.999</strong>
-              <div class="card-actions">
-                <a class="button button-small" href="#contato">Comprar</a
-                ><a href="#detalhes">Saiba mais ›</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <a
-                class="product-visual"
-                href="#detalhes"
-                aria-label="Conhecer iPhone 17e"
-              >
-                <img
-                  src="IMGS/rosa.jpg"
-                  alt="iPhone 17e rosa-pálido"
-                  loading="lazy"
-                />
-              </a>
-              <div class="swatches" aria-label="Cores disponíveis">
-                <i class="pink active"></i><i class="white"></i
-                ><i class="black"></i>
-              </div>
-              <h3>iPhone 17e</h3>
-              <p>Tudo o que você ama. Feito para durar.</p>
-              <strong>A partir de R$ 5.799</strong>
-              <div class="card-actions">
-                <a class="button button-small" href="#contato">Comprar</a
-                ><a href="#detalhes">Saiba mais ›</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <a
-                class="product-visual"
-                href="#detalhes"
-                aria-label="Conhecer iPhone 16"
-              >
-                <img
-                  src="IMGS/ROXO.jpg"
-                  alt="iPhone 16 azul ultramarino"
-                  loading="lazy"
-                />
-              </a>
-              <div class="swatches" aria-label="Cores disponíveis">
-                <i class="blue active"></i><i class="sky"></i
-                ><i class="lilac"></i><i class="pink"></i><i class="black"></i>
-              </div>
-              <h3>iPhone 16</h3>
-              <p>Desempenho incrível. Valor surpreendente.</p>
-              <strong>A partir de R$ 6.799</strong>
-              <div class="card-actions">
-                <a class="button button-small" href="#contato">Comprar</a
-                ><a href="#detalhes">Saiba mais ›</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="statement" aria-label="Manifesto de design">
-        <div class="marquee marquee-one" aria-hidden="true">
-          <div>
-            Design que move. Tecnologia que transforma.
-            <span>Design que move. Tecnologia que transforma.</span>
-          </div>
-        </div>
-        <div class="marquee marquee-two" aria-hidden="true">
-          <div>
-            Feito para o futuro. Criado para você.
-            <span>Feito para o futuro. Criado para você.</span>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="about section-light"
-        id="sobre"
-        aria-labelledby="about-title"
-      >
-        <div class="about-grid shell">
-          <div>
-            <p class="eyebrow dark">Nossa visão</p>
-            <h2 id="about-title" class="section-title split-title">
-              Sobre nós.
-            </h2>
-          </div>
-          <div class="about-copy">
-            <p class="about-lead">
-              Acreditamos que a melhor tecnologia desaparece nas mãos de quem
-              usa.
+            <p class="catalog-note shell">
+              Preços preservados do catálogo original. Este projeto não realiza
+              vendas.
             </p>
-            <p>
-              Cada detalhe foi pensado para ser intuitivo, durável e
-              extraordinariamente simples. Hardware e software criados juntos
-              formam uma experiência fluida, segura e profundamente pessoal.
-            </p>
-            <a class="about-link magnetic" href="#detalhes">
-              Conheça nossa filosofia <span>↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="details section-light"
-        id="detalhes"
-        aria-labelledby="details-title"
-      >
-        <div class="details-pin">
-          <div class="section-heading shell reveal-row">
-            <div>
-              <p class="eyebrow dark">Mais de perto</p>
-              <h2 id="details-title" class="section-title split-title">
-                Conheça melhor<br />o iPhone.
-              </h2>
-            </div>
-            <div
-              class="carousel-buttons dark-buttons"
-              aria-label="Controles dos destaques"
-            >
-              <button
-                type="button"
-                data-carousel-prev="highlights"
-                aria-label="Destaques anteriores"
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                data-carousel-next="highlights"
-                aria-label="Próximos destaques"
-              >
-                →
-              </button>
-            </div>
-          </div>
-
-          <div class="highlights-scroll" data-carousel="highlights">
-            <article class="highlight-card">
-              <img
-                src="IMGS/Container-3.jpg"
-                alt="Detalhe das câmeras do iPhone 17 Pro"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Inovação</small>
-                <h3>Projetado para durar.<br />E impressionar.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre inovação"
-                data-modal-title="Projetado para durar."
-                data-modal-copy="A estrutura unibody combina resistência, leveza e uma distribuição térmica mais eficiente — tudo com acabamento preciso."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/List Item-2.jpg"
-                alt="Retrato em preto e branco fotografado com iPhone"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Câmeras</small>
-                <h3>Fotos e vídeos<br />para provar.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre câmeras"
-                data-modal-title="Câmeras de última geração."
-                data-modal-copy="O sistema Pro Fusion registra mais detalhes, cores naturais e vídeos cinematográficos em qualquer condição de luz."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/Container-2.jpg"
-                alt="Chip A19 Pro"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Chip e bateria</small>
-                <h3>Potência para<br />o dia inteiro.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre desempenho"
-                data-modal-title="A19 Pro. Velocidade de sobra."
-                data-modal-copy="Uma arquitetura avançada entrega alto desempenho sustentado e eficiência energética para tudo o que você faz."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/Container-1.jpg"
-                alt="iPhone com interface inteligente"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>iOS e inteligência</small>
-                <h3>Novo visual.<br />Ainda mais mágico.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre iOS"
-                data-modal-title="Simples. Útil. Pessoal."
-                data-modal-copy="Recursos inteligentes ajudam você a escrever, criar e se comunicar, com privacidade integrada desde o início."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/List Item.png"
-                alt="Parte traseira do iPhone Air azul-céu"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Meio ambiente</small>
-                <h3>Pensado para você.<br />E para o planeta.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre meio ambiente"
-                data-modal-title="Mais inovação. Menos impacto."
-                data-modal-copy="Materiais reciclados, embalagens compactas e eficiência energética fazem parte de cada etapa do produto."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/Container.png"
-                alt="Vista aérea de uma estrada atravessando uma floresta"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Segurança</small>
-                <h3>Ajuda quando<br />mais importa.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre recursos de segurança"
-                data-modal-title="Segurança sempre presente."
-                data-modal-copy="Recursos avançados ajudam você a pedir assistência e compartilhar informações importantes em situações inesperadas."
-              >
-                +
-              </button>
-            </article>
-            <article class="highlight-card">
-              <img
-                src="IMGS/List Item-1.jpg"
-                alt="Símbolo de privacidade sobre fundo preto"
-                loading="lazy"
-              />
-              <div class="highlight-copy">
-                <small>Privacidade</small>
-                <h3>Seus dados.<br />Sob seu controle.</h3>
-              </div>
-              <button
-                class="plus-button"
-                type="button"
-                aria-label="Ver detalhes sobre privacidade"
-                data-modal-title="Privacidade integrada."
-                data-modal-copy="Proteções importantes são incorporadas ao sistema para que suas informações continuem pessoais e seguras."
-              >
-                +
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="compare section-light"
-        id="comparar"
-        aria-labelledby="compare-title"
-      >
-        <div class="compare-inner shell">
-          <p class="eyebrow dark">A escolha é sua</p>
-          <h2 id="compare-title" class="split-title">
-            Qual iPhone é<br /><span>a sua cara?</span>
-          </h2>
-          <a class="button button-dark magnetic" href="#familia"
-            >Comparar modelos <span>↗</span></a
+          </section>
+          <section
+            class="statement"
+            id="sobre"
+            aria-labelledby="statement-title"
           >
-        </div>
-        <div class="compare-orb" aria-hidden="true"></div>
-      </section>
-    </main>
-
-    <footer class="footer" id="contato">
-      <div class="footer-main shell">
-        <p class="eyebrow">Pronto para começar?</p>
-        <h2 class="split-title">Vamos conversar.</h2>
-        <p class="footer-intro">
-          Descubra qual iPhone combina com você ou converse com nosso time.
-        </p>
-        <a class="footer-contact magnetic" href="mailto:hello@tech.apple"
-          >hello@tech.apple <span>↗</span></a
-        >
+            <div class="shell">
+              <div class="section-label">
+                <span>03 / NOSSA PERSPECTIVA</span
+                ><span>MENOS RUÍDO. MAIS SIGNIFICADO.</span>
+              </div>
+              <h2 id="statement-title">
+                <span class="statement-line">Design além</span
+                ><span class="statement-line">do <em>esperado.</em></span>
+              </h2>
+              <div class="statement-bottom">
+                <span class="statement-symbol" aria-hidden="true"
+                  ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                ></span>
+                <p>
+                  A melhor tecnologia desaparece<br />nas mãos de quem usa.<br /><span
+                    >E abre espaço para o que importa.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+          <section
+            class="details"
+            id="detalhes"
+            aria-labelledby="details-title"
+          >
+            <div class="section-label shell">
+              <span>04 / A EXPERIÊNCIA</span
+              ><span>POR TRÁS DE CADA POSSIBILIDADE</span>
+            </div>
+            <div class="section-heading shell">
+              <h2 id="details-title" class="section-title split-title">
+                Muito além<br /><span>do que você vê.</span>
+              </h2>
+              <p class="heading-note">
+                Um olhar sobre o universo iPhone.<br />Do primeiro toque à
+                próxima ideia.
+              </p>
+            </div>
+            <article class="camera-story shell" aria-labelledby="camera-title">
+              <figure class="portrait-figure">
+                <img
+                  src="IMGS/List%20Item-2.jpg"
+                  alt="Retrato em preto e branco de uma mulher de chapéu e óculos"
+                  width="372"
+                  height="680"
+                  loading="lazy"
+                />
+                <figcaption>LUZ. EXPRESSÃO. PONTO DE VISTA.</figcaption>
+              </figure>
+              <div class="story-copy">
+                <p class="eyebrow">01 — Câmeras</p>
+                <h3 id="camera-title" class="split-title">
+                  Seu olhar.<br />Sem limites.
+                </h3>
+                <p>
+                  Existem momentos que merecem mais do que uma lembrança.
+                  Explore uma nova forma de contar suas histórias.
+                </p>
+                <button class="text-link" data-story="camera">
+                  Um outro ponto de vista
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </article>
+            <article
+              class="performance-story shell"
+              aria-labelledby="performance-title"
+            >
+              <div class="performance-type">
+                <p class="eyebrow">02 — Desempenho</p>
+                <h3 id="performance-title" class="split-title">
+                  Sua próxima ideia.<br /><span>Sem pausa.</span>
+                </h3>
+                <p>
+                  Da criação ao entretenimento.<br />Espaço para ir além, todos
+                  os dias.
+                </p>
+                <button class="text-link" data-story="performance">
+                  Explore o desempenho
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
+              <figure>
+                <img
+                  src="IMGS/Container-2.jpg"
+                  alt="Representação do chip A19 Pro presente no material do iPhone 17 Pro"
+                  width="372"
+                  height="680"
+                  loading="lazy"
+                />
+                <figcaption>IPHONE 17 PRO / MATERIAL DO CATÁLOGO</figcaption>
+              </figure>
+            </article>
+            <article class="material-story shell">
+              <div class="material-visual">
+                <img
+                  src="IMGS/List%20Item.png"
+                  alt="Detalhe do acabamento azul-céu e da câmera do iPhone Air"
+                  width="372"
+                  height="680"
+                  loading="lazy"
+                />
+              </div>
+              <div class="story-copy">
+                <p class="eyebrow">03 — Design e materiais</p>
+                <h3 class="split-title">A essência<br />está na forma.</h3>
+                <p>
+                  Linhas que encontram equilíbrio. Acabamentos que ganham vida
+                  com a luz. Design para olhar mais de perto.
+                </p>
+                <a
+                  class="text-link"
+                  href="#iphone-air"
+                  data-show-product="iphone-air"
+                  >Conheça o iPhone Air
+                  <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                ></a>
+              </div>
+            </article>
+            <div class="experience-pair shell">
+              <article class="system-story">
+                <div>
+                  <p class="eyebrow">04 — Sistema e experiência</p>
+                  <h3>Intuitivo.<br />Desde o primeiro toque.</h3>
+                  <button class="text-link" data-story="system">
+                    Descubra a experiência
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </button>
+                </div>
+                <img
+                  src="IMGS/Container-1.jpg"
+                  alt="iPhone mostrando uma tela personalizada com fotografia"
+                  width="372"
+                  height="680"
+                  loading="lazy"
+                />
+              </article>
+              <article class="privacy-story">
+                <img
+                  src="IMGS/List%20Item-1.jpg"
+                  alt="Símbolo de cadeado integrado à maçã"
+                  width="372"
+                  height="680"
+                  loading="lazy"
+                />
+                <div>
+                  <p class="eyebrow">05 — Privacidade</p>
+                  <h3>Seus dados.<br />Seu espaço.</h3>
+                  <button class="text-link" data-story="privacy">
+                    Entenda a privacidade
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section
+            class="compare section-light"
+            id="comparar"
+            aria-labelledby="compare-title"
+          >
+            <div class="shell">
+              <div class="section-label">
+                <span>05 / LADO A LADO</span><span>A ESCOLHA É SUA</span>
+              </div>
+              <div class="section-heading">
+                <h2 id="compare-title" class="section-title split-title">
+                  Duas perspectivas.<br /><span>A sua escolha.</span>
+                </h2>
+                <p class="heading-note">
+                  Selecione dois modelos.<br />Encontre o que combina com você.
+                </p>
+              </div>
+              <div class="compare-grid">
+                <div class="compare-column">
+                  <label for="compare-a">Primeiro modelo</label
+                  ><select id="compare-a"></select>
+                  <div class="compare-product" id="compare-product-a"></div>
+                </div>
+                <div class="compare-column">
+                  <label for="compare-b">Segundo modelo</label
+                  ><select id="compare-b"></select>
+                  <div class="compare-product" id="compare-product-b"></div>
+                </div>
+              </div>
+              <p class="compare-status sr-only" role="status"></p>
+              <p class="compare-note">
+                Informações e preços do catálogo original, sujeitos a revisão.
+                Especificações técnicas serão incluídas após verificação. O
+                iPhone 18 Pro é um estudo visual e não integra esta comparação.
+              </p>
+              <noscript
+                ><p>
+                  Ative o JavaScript para selecionar modelos. Todos os modelos e
+                  preços estão disponíveis na
+                  <a href="#familia">coleção acima</a>.
+                </p></noscript
+              >
+            </div>
+          </section>
+          <section class="final-experience" aria-labelledby="final-title">
+            <img
+              src="assets/iphone-18-poster.webp"
+              alt="O conceito roxo metálico visto de perto"
+              width="1920"
+              height="1080"
+              loading="lazy"
+            />
+            <div class="final-overlay"></div>
+            <div class="shell final-content">
+              <p class="eyebrow">O FUTURO É UM PONTO DE VISTA.</p>
+              <h2 id="final-title" class="split-title">
+                O próximo capítulo<br />começa aqui.
+              </h2>
+              <a class="text-link" href="#familia"
+                >Encontre sua perspectiva
+                <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+              ></a>
+            </div>
+            <span class="final-note"
+              >IPHONE 18 PRO / CONCEITO INDEPENDENTE</span
+            >
+          </section>
+        </main>
+        <footer class="footer" id="contato">
+          <div class="footer-directory shell">
+            <div class="footer-identity">
+              <a class="brand" href="#inicio">Tech<span>.</span>apple</a>
+              <p>Uma exploração de design,<br />tecnologia e possibilidades.</p>
+              <span>Concept experience by Light</span>
+            </div>
+            <div class="footer-column">
+              <h2>Explore</h2>
+              <a href="#inicio">O conceito</a
+              ><a href="#sobre">Nossa perspectiva</a
+              ><a href="#detalhes">A experiência</a
+              ><a href="#comparar">Comparar modelos</a>
+            </div>
+            <div class="footer-column">
+              <h2>A família</h2>
+              <a href="#iphone-17-pro" data-show-product="iphone-17-pro"
+                >iPhone 17 Pro</a
+              ><a href="#iphone-air" data-show-product="iphone-air"
+                >iPhone Air</a
+              ><a href="#iphone-17" data-show-product="iphone-17">iPhone 17</a
+              ><a href="#iphone-17e" data-show-product="iphone-17e"
+                >iPhone 17e</a
+              ><a href="#iphone-16" data-show-product="iphone-16">iPhone 16</a>
+            </div>
+            <div class="footer-column footer-top">
+              <a class="top-link" href="#inicio" aria-label="Voltar ao topo"
+                ><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg></a
+              ><span>De volta ao início</span>
+            </div>
+          </div>
+          <div class="footer-bottom shell">
+            <p>© 2026 Tech.apple. Projeto de João Carlos.</p>
+            <p>
+              Conceito independente, sem vínculo com a Apple.<br />O iPhone 18
+              Pro apresentado é um estudo visual não oficial.
+            </p>
+            <span>DESIGNED TO INSPIRE.</span>
+          </div>
+        </footer>
       </div>
-      <div class="footer-directory shell">
-        <a class="footer-brand" href="#inicio">Tech.<span>apple</span></a>
-        <div class="footer-column">
-          <p>Produtos</p>
-          <a href="#familia">iPhone 17 Pro</a>
-          <a href="#familia">iPhone Air</a>
-          <a href="#comparar">Comparar</a>
-        </div>
-        <div class="footer-column">
-          <p>Descubra</p>
-          <a href="#sobre">Nossa visão</a>
-          <a href="#detalhes">Tecnologia</a>
-          <a href="#detalhes">Meio ambiente</a>
-        </div>
-        <div class="footer-column">
-          <p>Atendimento</p>
-          <a href="mailto:hello@tech.apple">Fale conosco</a>
-          <a href="#familia">Comprar</a>
-          <a href="#inicio">Suporte</a>
-        </div>
-      </div>
-      <div class="footer-bottom shell">
-        <p>© 2026 Tech.apple. Conceito independente.</p>
-        <div>
-          <a href="#inicio">Instagram</a><a href="#inicio">YouTube</a
-          ><a href="#inicio">LinkedIn</a>
-        </div>
-        <a href="#inicio">Voltar ao topo ↑</a>
-      </div>
-    </footer>
-
-    <div
-      class="detail-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
-      aria-hidden="true"
-    >
-      <div class="modal-backdrop"></div>
-      <div class="modal-card">
-        <button class="modal-close" type="button" aria-label="Fechar detalhes">
-          ×
-        </button>
-        <p class="eyebrow">Em detalhes</p>
-        <h2 id="modal-title">Projetado para durar.</h2>
+    </div>
+    <dialog class="detail-modal" aria-labelledby="modal-title">
+      <button
+        class="icon-button dialog-close"
+        data-close
+        aria-label="Fechar detalhes"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <div class="modal-image"></div>
+      <div class="modal-content">
+        <p class="eyebrow">Em perspectiva</p>
+        <h2 id="modal-title"></h2>
         <p class="modal-copy"></p>
+        <div class="modal-extra"></div>
       </div>
-    </div>
-
-    <div class="toast" role="status" aria-live="polite">
-      Sua sacola está pronta para novas ideias.
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-    <script src="script.js"></script>
+    </dialog>
   </body>
 </html>
